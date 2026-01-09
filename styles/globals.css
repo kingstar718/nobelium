@@ -1,6 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* styles/globals.css */
+@import url('https://npm.elemecdn.com/lxgw-wenkai-screen-webfont/style.css');
+
 @font-face {
   font-family: 'IBM Plex Sans';
   font-weight: 100 900;
