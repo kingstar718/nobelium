@@ -1,5 +1,5 @@
 const BLOG = {
-  title: '陆上江南的博客',
+  title: '',
   author: '陆上江南',
   email: 'i@craigary.net',
   link: 'https://r.wujinxing.site',
@@ -14,9 +14,9 @@ const BLOG = {
   since: 2021, // If leave this empty, current year will be used.
   postsPerPage: 7,
   sortByDate: true,
-  showAbout: true,
+  showAbout: false,
   showArchive: true,
-  autoCollapsedNavBar: false, // The automatically collapsed navigation bar
+  autoCollapsedNavBar: true, // The automatically collapsed navigation bar
   ogImageGenerateURL: 'https://og-image-craigary.vercel.app', // The link to generate OG image, don't end with a slash
   socialLink: '', // eg. https://twitter.com/craigaryhart
   seo: {
