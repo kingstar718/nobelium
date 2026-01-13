@@ -18,7 +18,8 @@ const Footer = ({ fullWidth }) => {
           <p>
             © {BLOG.author} {from === y || !from ? y : `${from} - ${y}`}
           </p>
-          <Vercel />
+          {/* 注释掉Vercel页脚 */}
+          {/* <Vercel /> */}
         </div>
       </div>
     </div>
