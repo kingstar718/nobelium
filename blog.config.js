@@ -48,7 +48,7 @@ const BLOG = {
       distractionFreeMode: false
     },
     utterancesConfig: {
-      repo: 'https://github.com/kingstar718/nobelium-comment.git'
+      repo: 'kingstar718/nobelium-comment'
     },
     cusdisConfig: {
       appId: '2a12b5e4-3f51-49c3-922c-34e4273d8a39', // data-app-id
