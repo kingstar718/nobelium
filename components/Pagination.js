@@ -1,10 +1,8 @@
 import Link from 'next/link'
 import { useConfig } from '@/lib/config'
-import { useLocale } from '@/lib/locale'
 
 const Pagination = ({ page, showNext }) => {
   const BLOG = useConfig()
-  const locale = useLocale()
   const currentPage = +page
   let additionalClassName = 'justify-between'
   if (currentPage === 1 && showNext) additionalClassName = 'justify-end'
@@ -22,14 +20,14 @@ const Pagination = ({ page, showNext }) => {
           }
         >
           <button rel="prev" className="block cursor-pointer">
-            ← {locale.PAGINATION.PREV}
+            ← 上一页
           </button>
         </Link>
       )}
       {showNext && (
         <Link href={`/page/${currentPage + 1}`}>
           <button rel="next" className="block cursor-pointer">
-            {locale.PAGINATION.NEXT} →
+            下一页 →
           </button>
         </Link>
       )}

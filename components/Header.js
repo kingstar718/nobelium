@@ -2,17 +2,15 @@ import { forwardRef, useCallback, useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useConfig } from '@/lib/config'
-import { useLocale } from '@/lib/locale'
 import useTheme from '@/lib/theme'
 
 const NavBar = () => {
   const BLOG = useConfig()
-  const locale = useLocale()
   const links = [
-    { id: 0, name: locale.NAV.INDEX, to: BLOG.path || '/', show: true },
-    { id: 1, name: locale.NAV.ABOUT, to: '/about', show: BLOG.showAbout },
-    { id: 2, name: locale.NAV.RSS, to: '/feed', show: false, external: true },
-    { id: 3, name: locale.NAV.SEARCH, to: '/search', show: true }
+    { id: 0, name: '博客', to: BLOG.path || '/', show: true },
+    { id: 1, name: '关于', to: '/about', show: BLOG.showAbout },
+    { id: 2, name: '订阅', to: '/feed', show: false, external: true },
+    { id: 3, name: '搜索', to: '/search', show: true }
   ]
   return (
     <div className="flex-shrink-0">

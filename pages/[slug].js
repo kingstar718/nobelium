@@ -3,7 +3,6 @@ import { clientConfig } from '@/lib/server/config'
 import { useRouter } from 'next/router'
 import cn from 'classnames'
 import { getAllPosts, getPostBlocks } from '@/lib/notion'
-import { useLocale } from '@/lib/locale'
 import { useConfig } from '@/lib/config'
 import { createHash } from 'crypto'
 import Container from '@/components/Container'
@@ -13,7 +12,6 @@ import Comments from '@/components/Comments'
 export default function BlogPost ({ post, blockMap, emailHash }) {
   const router = useRouter()
   const BLOG = useConfig()
-  const locale = useLocale()
 
   // TODO: It would be better to render something
   if (router.isFallback) return null
@@ -49,7 +47,7 @@ export default function BlogPost ({ post, blockMap, emailHash }) {
             onClick={() => router.push(BLOG.path || '/')}
             className="mt-2 cursor-pointer hover:text-black dark:hover:text-gray-100"
           >
-            ← {locale.POST.BACK}
+            ← 返回
           </button>
         </a>
         <a>
@@ -60,7 +58,7 @@ export default function BlogPost ({ post, blockMap, emailHash }) {
             })}
             className="mt-2 cursor-pointer hover:text-black dark:hover:text-gray-100"
           >
-            ↑ {locale.POST.TOP}
+            ↑ 回到顶部
           </button>
         </a>
       </div>
