@@ -1,5 +1,5 @@
 const BLOG = {
-  title: '',
+  title: '陆上江南的博客',
   author: '陆上江南',
   email: 'i@craigary.net',
   link: 'https://r.wujinxing.site',
@@ -8,7 +8,7 @@ const BLOG = {
   timezone: 'Asia/Shanghai', // Your Notion posts' date will be interpreted as this timezone. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for all options.
   appearance: 'auto', // ['light', 'dark', 'auto'],
   font: 'sans-serif', // ['sans-serif', 'serif']
-  lightBackground: '#ffffff', // use hex value, don't forget '#' e.g #fffefc
+  lightBackground: '#fffef5', // use hex value, don't forget '#' e.g #fffefc
   darkBackground: '#18181B', // use hex value, don't forget '#'
   path: '', // leave this empty unless you want to deploy Nobelium in a folder
   since: 2021, // If leave this empty, current year will be used.
@@ -37,23 +37,9 @@ const BLOG = {
     }
   },
   comment: {
-    // support provider: gitalk, utterances, cusdis
     provider: 'utterances', // leave it empty if you don't need any comment plugin
-    gitalkConfig: {
-      repo: '', // The repository of store comments
-      owner: '',
-      admin: [],
-      clientID: '',
-      clientSecret: '',
-      distractionFreeMode: false
-    },
     utterancesConfig: {
       repo: 'kingstar718/nobelium-comment'
-    },
-    cusdisConfig: {
-      appId: '2a12b5e4-3f51-49c3-922c-34e4273d8a39', // data-app-id
-      host: 'https://cusdis.com', // data-host, change this if you're using self-hosted version
-      scriptSrc: 'https://cusdis.com/js/cusdis.es.js' // change this if you're using self-hosted version
     }
   },
   isProd: process.env.VERCEL_ENV === 'production' // distinguish between development and production environment (ref: https://vercel.com/docs/environment-variables#system-environment-variables)

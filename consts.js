@@ -1,6 +1,5 @@
 exports.FONTS_SANS = [
   '"IBM Plex Sans"',
-  '"LXGW WenKai Screen"',   // 刚才在 CSS 里引入的霞鹜文楷
   'ui-sans-serif',
   'system-ui',
   '-apple-system',

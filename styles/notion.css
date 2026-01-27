@@ -1,7 +1,7 @@
 /* NOTION CSS OVERRIDE */
 
 :root {
-  --no-leading: 2rem;
+  --no-leading: 1.5rem;
 
   /* Notion colors */
 
@@ -139,6 +139,34 @@ pre[class*='language-'] {
 }
 .dark .notion-hr {
   border-top-color: rgba(255, 255, 255, 0.13);
+}
+
+/* Unified heading styles - all headings use same size as blog title */
+.notion-h1,
+.notion-h2,
+.notion-h3 {
+  @apply text-lg md:text-xl;
+  @apply font-normal;
+  @apply my-2;
+  @apply p-0;
+  line-height: var(--no-leading);
+  font-weight: inherit;
+}
+
+/* Add prefix symbols to distinguish heading levels */
+.notion-h1::before {
+  content: '# ';
+  @apply text-gray-400 dark:text-gray-500;
+}
+
+.notion-h2::before {
+  content: '## ';
+  @apply text-gray-400 dark:text-gray-500;
+}
+
+.notion-h3::before {
+  content: '### ';
+  @apply text-gray-400 dark:text-gray-500;
 }
 .notion-list {
   width: 100%;
